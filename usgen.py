@@ -139,12 +139,12 @@ HLA_DR_pro = []
 HLA_A_D_pro = []
 HLA_B_D_pro = []
 HLA_DR_D_pro = []
-file_A = file('D:\\newworkspace\\egarlitarian\\us\\HLA_A1.txt','r')
-file_B = file('D:\\newworkspace\\egarlitarian\\us\\HLA_B1.txt','r')
-file_DR = file('D:\\newworkspace\\egarlitarian\\us\\HLA_DR1.txt','r')
-file_A_D = file('D:\\newworkspace\\egarlitarian\\us\\HLA_A_D.txt','r')
-file_B_D = file('D:\\newworkspace\\egarlitarian\\us\\HLA_B_D.txt','r')
-file_DR_D = file('D:\\newworkspace\\egarlitarian\\us\\HLA_DR_D.txt','r')
+file_A = file('us\\HLA_A1.txt','r')
+file_B = file('us\\HLA_B1.txt','r')
+file_DR = file('us\\HLA_DR1.txt','r')
+file_A_D = file('us\\HLA_A_D.txt','r')
+file_B_D = file('us\\HLA_B_D.txt','r')
+file_DR_D = file('us\\HLA_DR_D.txt','r')
 for i in range(4):
     HLA_A_pro.append([i+1,file_A.readline().split()])
     HLA_B_pro.append([i+1,file_B.readline().split()])
@@ -169,7 +169,7 @@ HLA_B_D_dict = dict(HLA_B_D_pro)
 HLA_DR_D_dict = dict(HLA_DR_D_pro)
 #print len(HLA_DR_D_dict[3])
 
-file_CREG= file('D:\\newworkspace\\egarlitarian\\us\\CREG.txt','r')
+file_CREG= file('us\\CREG.txt','r')
 A_CREG = []
 B_CREG = []
 DR_CREG = []

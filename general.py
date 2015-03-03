@@ -8,7 +8,8 @@ for i in range(10,110,10)+range(200,1100,100):
         else:
             os.system('cngen.py '+str(i))
         ct.transfer()
-        os.system('basenpc.py')
-        os.system('base-improved.py')
         os.system('ouralgo2.py')
+        if i<100:
+            os.system('basenpc.py')
+            os.system('base-improved.py')
         

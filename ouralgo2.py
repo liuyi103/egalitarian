@@ -211,7 +211,7 @@ def preflow():
     basespeed=e[n]-baseflow
     baseflow=e[n]
     return e[n],d
-while c[0][1]<1+acc+1e-10:
+while c[0][1]<1+acc+1e-10 and time.time()-time1<500:
     preflow()
 f3.write(str(time.time()-time1)+'\n')
 # for i in range(1,on+1):
