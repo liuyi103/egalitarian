@@ -45,9 +45,9 @@ usedD={}
 minf=100
 minJ={}
 def maindfs(x,J):
-    if time.time()-time1>240:
+    if time.time()-time1>500:
         out=file('res_base.txt','a')
-        out.write('241\n')
+        out.write('500+\n')
         exit(0)
     global D
     global minJ

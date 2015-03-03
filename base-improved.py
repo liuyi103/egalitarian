@@ -86,9 +86,9 @@ dieM={}
 finishD=[]
 ans={}
 def enumM(x,tm):
-    if time.time()-time1>240:
+    if time.time()-time1>500:
         f3=file('res_base_improved.txt','a')
-        f3.write('241\n')
+        f3.write('500+\n')
         exit(0)
     if x==len(M):
         dieD={}

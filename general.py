@@ -1,6 +1,6 @@
 import os
 import convert as ct
-for i in range(10,110,10):
+for i in range(10,110,10)+range(200,1100,100):
     for j in range(10):
         print i,j
         if j % 2:
