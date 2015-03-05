@@ -27,6 +27,7 @@ for i in range(T/2):
     match[int(x)]=int(y)
     match[int(y)]=int(x)
 f2.close()
+print match
 E={}
 M={}
 C={}
@@ -53,8 +54,8 @@ for i in range(n):
                 break
         if not flag:
             E[i]=1
-print E,M,C
 #what I will do next is graph construction
+print E,M,C
 D=[]
 dd=0
 dived=[]
@@ -74,7 +75,6 @@ for i in C:
                     dived.append(j)
         bfs=tbfs
     D.append(tset)
-print D
 Dm={}
 for i in range(len(D)):
     for j in D[i]:
@@ -97,6 +97,7 @@ for i in C:
         todel1.append(D[Dm[i]])
 for i in todel1:
     D.remove(i)
+print D
 mm={}
 for i in M:
     a.append(p)
@@ -212,6 +213,6 @@ def dfs(ll,rl,a,st,en):#left-lambda,right-lambda
         tst=a1[-1]
     dfs(ll,x,a1,tst,tenn)
 dfs(0,1,a,st,en)
-print ans
+print f
     
     

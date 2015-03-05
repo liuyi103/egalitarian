@@ -79,7 +79,6 @@ def preflow(a,c,f,st,en,lbd):#a is node set
         x,y,z=i
         c[x]=y
         f[x]=z
-    print a,e[en],lbd,d
     return e[en],t1,t2,t3
 
 
