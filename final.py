@@ -32,30 +32,31 @@ E={}
 M={}
 C={}
 used=[]
-for t in range(n):
-    if not t in match:
-        C[t]=1
-        Q=[t]
-        while len(Q)>0:
-            i=Q[0]
-            del Q[0]
-            for j in conn[i]:
-                if j in match and not j in used:
-                    used.append(j)
-                    Q.append(match[j])
-                    C[match[j]]=1
+def divdfs(st,hist):
+    global M,C
+    if st in hist or st in C:
+        return
+    if st in M:
+        del M[st]
+    C[st]=1
+    for i in conn[st]:
+        if i not in match:
+            continue
+        if match[i]==st:
+            continue
+        if match[i] in C:
+            continue
+        if i not in C:
+            M[i]=1
+        divdfs(match[i],hist+[st,i])
+    pass
 for i in range(n):
-    if not i in C:
-        flag=False
-        for j in C:
-            if j in conn[i]:
-                M[i]=1
-                flag=True
-                break
-        if not flag:
-            E[i]=1
+    if i not in match:
+        divdfs(i,[])
+for i in range(n):
+    if i not in C.keys()+M.keys():
+        E[i]=1
 #what I will do next is graph construction
-print E,M,C
 D=[]
 dd=0
 dived=[]
@@ -188,9 +189,11 @@ merge(a,rs[1]['t2']+rs[1]['t3'])
 if not en in a:
     en=a[-1]
 def dfs(ll,rl,a,st,en):#left-lambda,right-lambda
+    print ll,rl,'hhhh'
     global c,f
     if rs[ll]['speed']==rs[rl]['speed']:
         return 
+    print rs[ll]['speed'],rs[rl]['speed']
     a1,b1=getline(rs[ll]['flow'],ll,rs[ll]['speed'])
     a2,b2=getline(rs[rl]['flow'],rl,rs[rl]['speed'])
     x,y=jiaodian(a1,b1,a2,b2)
@@ -213,6 +216,6 @@ def dfs(ll,rl,a,st,en):#left-lambda,right-lambda
         tst=a1[-1]
     dfs(ll,x,a1,tst,tenn)
 dfs(0,1,a,st,en)
-print f
+print ans
     
     
