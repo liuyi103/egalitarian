@@ -122,9 +122,9 @@ HLA_DR = dict(DR)
 HLA_A_pro = []
 HLA_B_pro = []
 HLA_DR_pro = []
-file_A = file('cn\\HLA_A.txt','r')
-file_B = file('cn\\HLA_B.txt','r')
-file_DR = file('cn\\HLA_DR.txt','r')
+file_A = file('cn/HLA_A.txt','r')
+file_B = file('cn/HLA_B.txt','r')
+file_DR = file('cn/HLA_DR.txt','r')
 for i in range(10):
     HLA_A_pro.append([i+1,file_A.readline().split()])
     HLA_B_pro.append([i+1,file_B.readline().split()])
@@ -136,7 +136,7 @@ HLA_A_dict = dict(HLA_A_pro)
 HLA_B_dict = dict(HLA_B_pro)
 HLA_DR_dict = dict(HLA_DR_pro)
 
-file_CREG= file('cn\\CREG.txt','r')
+file_CREG= file('cn/CREG.txt','r')
 A_CREG = []
 B_CREG = []
 DR_CREG = []

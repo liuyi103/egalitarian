@@ -18,7 +18,7 @@ for i in range(m):
     g[x,y]=1
 f.close()
 import os
-os.system("code2.exe")
+os.system("./code2run")
 f2=file("divide.txt",'r')
 T=int(f2.readline())
 match={}
