@@ -53,6 +53,7 @@ for i in range(n):
                 break
         if not flag:
             E[i]=1
+print E,M,C
 #what I will do next is graph construction
 D=[]
 dd=0
@@ -73,6 +74,7 @@ for i in C:
                     dived.append(j)
         bfs=tbfs
     D.append(tset)
+print D
 Dm={}
 for i in range(len(D)):
     for j in D[i]:
@@ -88,10 +90,13 @@ for i in E:
     ans[i]=1
 for i in M:
     ans[i]=1
+todel1=[]
 for i in C:
     if len(conn[i])==0:
         ans[i]=0
-        del D[Dm[i]]
+        todel1.append(D[Dm[i]])
+for i in todel1:
+    D.remove(i)
 mm={}
 for i in M:
     a.append(p)
